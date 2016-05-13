@@ -5,7 +5,7 @@
 int main(void)
 {
     char name[40];
-    const int h = 20;
+    const double h = -20000.40444;
     int temp;
 
     temp = hh + 3;
@@ -16,6 +16,6 @@ int main(void)
             strlen (name), sizeof name);
     printf ("The phrase of praise has %lu letters", strlen (PRAISE));
     printf ("and occupies %ld memory cells.\n", sizeof (PRAISE));
-    printf ("const int h = 20, and h = %d, hh = %d\n", h, temp);
+    printf ("const int h = 20, and h = %#-+14.4lf, hh = %d\n", h, temp);
     return 0;
 }
