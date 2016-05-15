@@ -16,4 +16,5 @@ int main (void)
         printf ("\n");
         i = 0;
     }
+    return 0;
 }
