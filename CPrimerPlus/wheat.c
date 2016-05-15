@@ -4,8 +4,9 @@
 int main (void)
 {
     double current, total;
-    int count = 'A';
+    int count;
 
+    printf ("%f\n", 3 / 5 * 22.0);
     printf ("square     grains       total   ");
     printf ("fraction of  \n");
     printf ("   added   grain   ");
