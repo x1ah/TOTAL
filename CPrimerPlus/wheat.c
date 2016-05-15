@@ -6,7 +6,7 @@ int main (void)
     double current, total;
     int count;
 
-    printf ("%f\n", 3 / 5 * 22.0);
+    printf ("%d\n", 23 % 3);
     printf ("square     grains       total   ");
     printf ("fraction of  \n");
     printf ("   added   grain   ");
