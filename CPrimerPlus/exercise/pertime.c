@@ -12,7 +12,6 @@ int main (void)
         second = get_second();
         if (second <= 0)
             break;
-        printf ("hello while%f\n", second);
         hour = (int) second / (UNIT * UNIT);
         temp = (int) second % (UNIT * UNIT);
         min = (int) temp / UNIT;
