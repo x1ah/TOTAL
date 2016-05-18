@@ -2,11 +2,13 @@
 double power (double n, int p);
 int main (void)
 {
-    double x, xpow;
+    double x, xpow, dou;
     int exp;
 
     printf ("Enter a number and the positive integer power");
     printf (" to which\nthe number will be raised. Enter q");
+    scanf ("%lf", &dou);
+    printf ("%lf", dou);
     printf (" to quit.\n");
     while (scanf ("%lf%d", &x, &exp) == 2)
     {
