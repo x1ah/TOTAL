@@ -1,5 +1,5 @@
 x = 'there are %d types of people ' % 10 # definex
-binary = 'binary ' # define 
+binary = 'binary ' # define
 do_not = "don't"
 y = "those who know %s and those who %s ." % (binary,do_not)
 
@@ -7,7 +7,7 @@ print x
 print y
 
 print "i said: %r ." % x
-print "i also said: %s." % y 
+print "i also said: %s." % y
 
 hilarious = False # define hilarious
 joke_evaluation = "isn't that joke so funny?! %r "
