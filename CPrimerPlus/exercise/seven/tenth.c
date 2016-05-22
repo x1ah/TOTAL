@@ -14,7 +14,7 @@ int main (void)
 
     do
     {
-        printf ("which kind of you[q to quit]:\n[1]single\n[2]household\n[3]marryed and have together\n[4]marryed and left.\n");
+        printf ("which kind of you:\n[1]single\n[2]household\n[3]marryed and have together\n[4]marryed and left.\n");
         if (scanf ("%d", &kind) == 1)
         {
             printf ("how much your salary: ");
