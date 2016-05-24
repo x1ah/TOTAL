@@ -6,7 +6,7 @@ void count (void);
 int main (void)
 {
     int choice;
-    void count (void);
+//    void count (void);
 
     while ((choice = get_choice ()) != 'q')
     {
@@ -19,7 +19,7 @@ int main (void)
             case 'c': count ();
                     break;
             default: printf ("Program error!\n");
-                    break;\
+                    break;
         }
     }
     printf ("Bye!\n");
