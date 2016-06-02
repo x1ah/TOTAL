@@ -11,7 +11,7 @@ int main (void)
     return 0;
 }
 
-int sum (int *ar, int n)
+int sum (int * ar, int n)
 {
     int i;
     int total = 0;
