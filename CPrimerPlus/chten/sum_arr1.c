@@ -1,6 +1,6 @@
 #include <stdio.h>
 #define SIZE 10
-int sum (int ar[], int n);
+int sum (int * ar, int n);
 int main (void)
 {
     int marbles[SIZE] = {20, 10, 5, 39, 4, 16, 19, 26, 31, 20};
@@ -18,6 +18,6 @@ int sum (int * ar, int n)
 
     for (i = 0; i < n; i++)
         total += ar[i];
-    printf ("The size of ar is %zd bytes.\n", sizeof (ar));
+    printf ("The size of total is %zd bytes.\n", sizeof (total));
     return total;
 }
