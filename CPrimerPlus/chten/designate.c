@@ -8,6 +8,7 @@ int main (void)
 
     printf ("%s\n", st);
 
+    days[7] = 1000;
     for (i = 0; i < MONTHS; i++)
     {
         printf ("%2d %d \n", i + 1, days[i]);
