@@ -1,6 +1,6 @@
 #include <stdio.h>
 void copy_arr (double * source, double * target1, int len);
-void copy_ptr (double * source, double * target2, int len);
+int copy_ptr (double * source, double * target2, int len);
 int main (void)
 {
     double source [5] = {1.1, 2.2, 3.3, 4.4, 5.5};
@@ -25,16 +25,15 @@ void copy_arr (double * source, double * target1, int len)
     printf ("}\n");
 }
 
-void copy_ptr (double * source, double * target2, int len)
+int copy_ptr (double * source, double * target, int len)
 {
-    int temp = 0;
-    double te;
-    printf ("target2 = {");
-    for (temp = 0; temp < len; temp ++)
+    int r;
+
+    for (r = 0; r < len; r++)
     {
-        te = * (source + temp);
-        * (target2 + temp) = te;
-        printf ("%4.1f,", te);
+        *(target + r) = *(source + r);
+        printf ("%5.1lf", *(target + r));
     }
-    printf ("}\n");
+    printf ("\n");
+    return 0;
 }
