@@ -18,7 +18,7 @@ int main (void)
     for (L = 0; L < ROW; L++)
     {
         average_line = average (arr, L);
-        printf ("average of row1 is: %5.3lf\n", average_line);
+        printf ("average of row%d is: %5.3lf\n", L+1, average_line);
         total += average_line;
     }
     printf ("average of all num is: %5.3lf\n", total);
@@ -33,7 +33,7 @@ void get_arr (double (*arr)[COL])
 
     for (r = 0; r < ROW; r++)
     {
-        printf ("Input 5 numbers for row %d split with space : \n", r);
+        printf ("Input 5 numbers for row %d split with space : \n", r+1);
         if ((scanf ("%lf %lf %lf %lf %lf",
                         *(arr+r)+0, *(arr+r)+1, *(arr+r)+2, *(arr+r)+3, *(arr+r)+4)) == 5)
             continue;
