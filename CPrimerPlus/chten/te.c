@@ -2,7 +2,7 @@
 int main (void)
 {
     int ar[2][3] = {{1, 2}, {3, 4}};
-    int (*pt) [2];
+    int (*pt) [3];
 
     pt = ar;
 
