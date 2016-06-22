@@ -27,7 +27,7 @@ int main (void)
 
     putchar ('\n');
     for (i=0; i < 3; i++)
-        for (j = 0; j < sizeof (* str[i]); j++)
+        for (j = 0; j < sizeof (str[i]); j++)
             printf ("str[%d][%d]: %p\n", i, j, (str+i)+j);
 
     return 0;
