@@ -14,15 +14,15 @@ int main (void)
 
     printf ("Input up to %d lines, and I will sort them.\n", LIM);
     printf ("To stop, press the Enter key at a line's start.\n");
-    while (ct < LIM && gets (input[ct]) != NULL && input[ct][0] != '\0')
+    while (ct < LIM && * fgets (input[ct], SIZE, stdin) != '\n' && input[ct][0] != '\0')
     {
         ptstr[ct] = input[ct];
         ct++;
     }
     stsrt (ptstr, ct);
-    puts ("\nHere;s the sorted list: \n");
+    puts ("Here;s the sorted list: \n");
     for (k = 0; k < ct; k++)
-        puts (ptstr[k]);
+        fputs (ptstr[k], stdout);
 
     return 0;
 }

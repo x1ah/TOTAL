@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 #define MAX 81
 int main (void)
 {
@@ -7,7 +8,11 @@ int main (void)
 
     printf ("Hi, whar's your name? \n");
     ptr = fgets (name, MAX, stdin);
-    printf ("%s? ah! %s!", name, ptr);
+    if (* ptr == '\n')
+//    if (strchr (ptr, '\n') == 0)
+        printf ("NULL\n");
+    else
+        printf ("not null\n");
 
     return 0;
 }
