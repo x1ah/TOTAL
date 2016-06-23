@@ -22,7 +22,5 @@ char * search (char * source_string, char ch)
             return temp_char;
         else if (*temp_char == '\0')
             return temp_char;
-        else
-            ;
     }
 }
