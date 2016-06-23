@@ -20,6 +20,7 @@ char * string_in (char * str1, char * str2)
     int status = 1;
     int len_str1 = (int) strlen (str1);
     int len_str2 = (int) strlen (str2);
+    char * return_res = NULL;
 
     for (index = 0; index < (len_str1 - len_str2); index ++)
     {
@@ -30,8 +31,11 @@ char * string_in (char * str1, char * str2)
                 status = 0;
 
             if (i-index == len_str2)
-                return (str1 + res);
+            {
+                return_res = (str1 + res);
+                break;
+            }
         }
     }
-    return NULL;
+    return return_res;
 }
