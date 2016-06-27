@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "pe12-3a.h"
+#include "pe12-2a.h"
 int main (void)
 {
     int mode;

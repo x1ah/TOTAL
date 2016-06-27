@@ -1,44 +1,39 @@
 #include <stdio.h>
-#include "pe12-2a.h"
-static int mode = 1;
-static float distant = 0;
-static float fuel = 0;
+#include "pe12-3a.h"
 
-void set_mode (int modes)
+void set_mode (int * mode)
 {
-    extern int mode;
 
-    if (modes > 1)
+    if (*mode > 1)
     {
         printf ("Invalid mode specified. Mode 1 (US) used.\n");
-        mode = 1;
+        * mode = 1;
     }
-    else
-        mode = modes;
 
 }
 
-void get_info (void)
+void get_info (int mode, float * distant, float * fuel)
 {
+
     switch (mode)
     {
         case 0:
             printf ("Enter distance traveled in kilometers: ");
-            scanf ("%f", &distant);
+            scanf ("%f", distant);
             printf ("Enter fuel consumed in liters: ");
-            scanf ("%f", &fuel);
+            scanf ("%f", fuel);
             break;
         case 1:
             printf ("Enter distance traveled in miles: ");
-            scanf ("%f", &distant);
+            scanf ("%f", distant);
             printf ("Enter fuel consumed in gallons: ");
-            scanf ("%f", &fuel);
+            scanf ("%f", fuel);
             break;
     }
 
 }
 
-void show_info (void)
+void show_info (int mode, float distant, float fuel)
 {
     switch (mode)
     {
