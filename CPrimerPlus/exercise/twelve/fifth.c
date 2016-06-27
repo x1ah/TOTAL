@@ -4,7 +4,7 @@ void sort (int * arr, int size);
 
 int main (void)
 {
-    int size = 1000;
+    int size = 100;
     int arr[size];
     int i;
 
@@ -12,7 +12,7 @@ int main (void)
     {
         arr[i] = rand() % 10 + 1;
         printf ("%3d", arr[i]);
-        if (i+1 % 50 == 0)
+        if (i % 20 == 19)
             putchar ('\n');
     }
     printf ("\nafter sorted: \n");
@@ -20,7 +20,7 @@ int main (void)
     for (i = 0; i < size; i++)
     {
         printf ("%3d", arr[i]);
-        if (i+1 % 50 == 0)
+        if (i % 20 == 19)
             putchar ('\n');
     }
     putchar ('\n');
@@ -35,7 +35,7 @@ void sort (int * arr, int size)
     for (i = 0; i < size; i++)
         for (j = i+1; j < size; j++)
         {
-            if (*(arr+i) > *(arr+j))
+            if (*(arr+i) < *(arr+j))
             {
                 temp = *(arr+i);
                 *(arr+i) = *(arr+j);
