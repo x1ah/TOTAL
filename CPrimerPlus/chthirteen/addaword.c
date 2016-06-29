@@ -14,7 +14,7 @@ int main (void)
     }
     puts ("Enter words to add to the fiile: press the Enter");
     fputs ("keys at the beginning of a line to terminate.\n", stdout);
-    while (fgets (words, MAX, stdin) && (words[0] != '\0') && *words != '\n')
+    while (fgets (words, MAX, stdin) != NULL && (words[0] != '\0') && *words != '\n')
         fprintf (fp, "%s ", words);
     fputs ("File contents: \n", stdout);
     rewind (fp);
