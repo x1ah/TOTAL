@@ -1,5 +1,4 @@
 #include <string.h>
-#include <stdio.h>
 char * mygets (char * name, int size)
 // 去除输入字符串尾的换行符
 {
