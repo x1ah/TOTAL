@@ -103,4 +103,5 @@ void show (void (* fp) (char *), char * str)
 {
     (* fp) (str);
     fputs (str, stdout);
+    putchar ('\n');
 }
