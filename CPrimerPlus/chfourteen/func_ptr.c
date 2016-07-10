@@ -96,7 +96,7 @@ void Transpose (char * str)
 
 void Dummy (char * str)
 {
-
+    NULL;
 }
 
 void show (void (* fp) (char *), char * str)
