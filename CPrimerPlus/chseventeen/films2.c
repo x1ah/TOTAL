@@ -22,7 +22,7 @@ int main (void)
         if (head == NULL)
             head = current;
         else
-            prev->next = NULL;
+            prev->next = current;
         current->next = NULL;
         strcpy (current->title, input);
         fputs ("Enter your rating <0-10>: \n", stdout);
@@ -41,7 +41,7 @@ int main (void)
     current = head;
     while (current != NULL)
     {
-        printf ("Movie : %s Rating: %d\n", current->title, current->rating);
+        printf ("Movie : %s \tRating: %d\n", current->title, current->rating);
         current = current->next;
     }
     current = head;
