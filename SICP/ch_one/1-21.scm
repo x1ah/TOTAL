@@ -11,6 +11,8 @@
 (define (smallest-divisor n)
   (find-divisor n 2))
 
+(define (prime? n)
+  (= n (smallest-divisor n)))
 
 (smallest-divisor 199)
 (smallest-divisor 1999)
