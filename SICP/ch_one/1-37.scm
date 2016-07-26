@@ -9,6 +9,7 @@
 ;;; 结果逼近黄金分割率
 ;;;
 ;;;
+;;; b)
 ;;; iter
 ;;;
 (define (cont-frac-iter n d counter max-count product)
