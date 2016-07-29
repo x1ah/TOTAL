@@ -18,3 +18,13 @@
 (define (branch-structure tree)
   ((car (cdr tree))))
 
+;;; b)
+
+(define (branch-weight branch)
+  ;;; 分支依然为活动体
+  (cond ((pair? (branch-structure branch)) (total-weight branch))
+        (branch-structure branch))
+
+(define (total-weight mobile)
+  (+ (branch-weight (left-branch mobile)
+                    (right-branch mobile))))
