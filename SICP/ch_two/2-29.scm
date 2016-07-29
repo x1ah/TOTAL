@@ -37,3 +37,7 @@
 (define (balance-mobile? mobile)
   (= (branch-torque (left-branch mobile))
      (branch-torque (right-branch mobile))))
+
+;;; d)
+;;; 修改 四个选择函数即可
+
