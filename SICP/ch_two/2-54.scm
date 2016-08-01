@@ -1,0 +1,10 @@
+(define (equal? a b)
+  (cond ((and (list? a) (list? b)) (list-equal? a b))
+        ((and (symbol? a) (symbol? b)) (eq? a b))
+        (else #f)))
+
+(define (list-equal? a b)
+  (cond ((and (null? a) (null? b)) #t)
+        ((or (null? a) (null? b)) #f)
+        ((equal? (car a) (car b)) (equal? (cdr a) (cdr b)))
+        (else #f)))
