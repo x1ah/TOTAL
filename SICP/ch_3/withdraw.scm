@@ -1,5 +1,6 @@
 (define new-withdraw
   (let ((balance 100))
+    (display balance)
     (lambda (amount)
       (if (>= balance amount)
         (begin (set! balance (- balance amount))
