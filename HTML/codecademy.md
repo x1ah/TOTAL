@@ -19,3 +19,6 @@
 - `<a href="http://www.****"></a>`
 - ordered list: `<ol>`, and it wrap each individual item with `<li>`
 - unorderd list: `<ul>` and it wrap each individual item wiht `<li>`
+- font style: add style attribute like: `<p style="font-size: 16px; font-family: Bodoni; color: red; background-color: green">`
+- make words bold: `<strong>` surround those words with opening tag and closing tag.
+- make words italicize : `<em>words</em>`
