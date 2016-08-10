@@ -17,3 +17,5 @@
 - There heve <p1> to <p6> size.
 - `<img src="http://www.***" />`
 - `<a href="http://www.****"></a>`
+- ordered list: `<ol>`, and it wrap each individual item with `<li>`
+- unorderd list: `<ul>` and it wrap each individual item wiht `<li>`
