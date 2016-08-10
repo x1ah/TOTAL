@@ -28,3 +28,8 @@
 - creat table `<table> </table>`
 - rows with `<tr>somtthings</tr>`
 - columns with `<td>somethings</td>`
+- table title: `<thead></thead>`
+- table body: `<tbody></tbody>`
+- cells of columns : `colspan="2"` attribute.
+- `<div></div>` to division web page.
+- `<span></span>` select pieces of text and change somethings. also support `style` attribute.
