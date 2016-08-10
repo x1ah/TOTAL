@@ -22,3 +22,9 @@
 - font style: add style attribute like: `<p style="font-size: 16px; font-family: Bodoni; color: red; background-color: green">`
 - make words bold: `<strong>` surround those words with opening tag and closing tag.
 - make words italicize : `<em>words</em>`
+
+### table
+
+- creat table `<table> </table>`
+- rows with `<tr>somtthings</tr>`
+- columns with `<td>somethings</td>`
