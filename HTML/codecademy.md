@@ -33,3 +33,4 @@
 - cells of columns : `colspan="2"` attribute.
 - `<div></div>` to division web page.
 - `<span></span>` select pieces of text and change somethings. also support `style` attribute.
+- besides `px`, can use `em`to define size, it's relative. em is equal to the default font size on whatever screen the user is using.
