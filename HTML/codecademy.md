@@ -36,7 +36,7 @@
 
 ### CSS
 
-- When using CSS file, under `<head></head>`,add `<link style="text/css" rel="stylesheet" href="xxxxx.css">`
+- When using CSS file, under `<head></head>`,add `<link type="text/css" rel="stylesheet" href="xxxxx.css">`
 - besides `px`, can use `em`to define size, it's relative. em is equal to the default font size on whatever screen the user is using.
 - CSS has some built-in font family, that is: `serif, sans-serif, cursive`
 - there are other font family as backup form of: `font-family: font1, font2, font3`
