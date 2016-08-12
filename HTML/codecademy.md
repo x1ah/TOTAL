@@ -1,3 +1,4 @@
+## HTML
 - <p></p> HTMLParagraphElement 段落tag.
 - an HTML file has both a head and a body
 
@@ -11,7 +12,6 @@
 </body>
 
 </html>
-
 ```
 
 - There heve <p1> to <p6> size.
@@ -34,7 +34,7 @@
 - `<div></div>` to division web page.
 - `<span></span>` select pieces of text and change somethings. also support `style` attribute.
 
-### CSS
+## CSS
 
 - When using CSS file, under `<head></head>`,add `<link type="text/css" rel="stylesheet" href="xxxxx.css">`
 - besides `px`, can use `em`to define size, it's relative. em is equal to the default font size on whatever screen the user is using.
