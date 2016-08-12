@@ -42,3 +42,4 @@
 - there are other font family as backup form of: `font-family: font1, font2, font3`
 - `text-decoration: none` 下划线.
 - `class="foo" --> .foo`, `id="bar" --> #bar`
+- **class** for many element use maintime, but **id** usually for exactly one element.
