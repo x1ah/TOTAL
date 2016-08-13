@@ -44,3 +44,7 @@
 - `class="foo" --> .foo`, `id="bar" --> #bar`
 - **class** for many element use maintime, but **id** usually for exactly one element.
 - select all html element: `* {}`
+- div tags were block elements by default.
+- `display` attribute have value: `block, inline-block, inline, none`
+- box model: ![box](https://s3.amazonaws.com/codecademy-blog/assets/ae09140c.png)
+
