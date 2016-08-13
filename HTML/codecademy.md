@@ -43,3 +43,4 @@
 - `text-decoration: none` 下划线.
 - `class="foo" --> .foo`, `id="bar" --> #bar`
 - **class** for many element use maintime, but **id** usually for exactly one element.
+- select all html element: `* {}`
