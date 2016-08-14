@@ -35,9 +35,11 @@ void test_show_bytes (int val)
     show_pointer (pval);
 }
 
+/*
 int main (void)
 {
     int val = 12345;
     test_show_bytes (val);
     return 0;
 }
+*/
