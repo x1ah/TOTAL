@@ -9,5 +9,4 @@ int leftmost_one (unsigned x)
     x |= x >> 16;
 
     return x - (x >> 1);
-
 }
