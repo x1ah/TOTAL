@@ -38,7 +38,7 @@ void test_show_bytes (int val)
 
 int main (void)
 {
-    int val = 12345;
+    int val = -12345;
     test_show_bytes (val);
     return 0;
 }
