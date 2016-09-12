@@ -4,6 +4,7 @@ copy from https://github.com/mofaph/csapp
 
 * 进程控制
 
+** 进程相关
 ** getpid/getppid 获取进程 ID
 
 #include <sys/types.h>
