@@ -1,3 +1,11 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <errno.h>
+#include <ctype.h>
+#include <malloc.h>
+
 #define TRUE 1
 #define FALSE 0
 #define OK 1
