@@ -3,7 +3,6 @@
 #define LIST_INIT_SIZE 100
 #define LISTINCREMENT 10
 
-typedef int ElemType;
 typedef struct {
     ElemType *elem;
     int length;
@@ -73,3 +72,43 @@ Status ListDelete (SqList *L, int i, ElemType *e)
     L->length -= 1;
     return OK;
 } // ListDelete
+
+int LocateElem (const SqList *L, const ElemType e, Status (*compare) (ElemType, ElemType))
+{   // 在L中查找第一个与e满足compare（）的元素位序
+    int i;
+    ElemType *p;
+    i = 1;
+    p = L->elem;
+    while (i <= L->length && !(*compare) (*p++, e))
+        i += 1;
+    if (i <= L->length)
+        return i;
+    return 0;
+}   // LocateElem
+
+void MergeList (const SqList *La, const SqList *Lb, SqList *Lc)
+{   // La，Lb元素按非递减排列，合并La，Lb得到Lc
+    ElemType *pa;
+    ElemType *pb;
+    ElemType *pc;
+    ElemType *pa_last;
+    ElemType *pb_last;
+    pa = La->elem;
+    pb = Lb->elem;
+    Lc->listsize = La->listsize + Lb->listsize;
+    pc = Lc->elem = (ElemType *) malloc (Lc->listsize * sizeof(ElemType));
+    if (!Lc->elem) exit(OVERFLOW);
+    pa_last = pa + La->length - 1;
+    pb_last = pb + Lb->length - 1;
+    while (pa <= pa_last && pb <= pb_last)
+    {
+        if (*pa <= *pb)
+            *pc++ = *pa++;
+        else
+            *pc++ = *pb++;
+    }
+    while (pa <= pa_last)
+        *pc++ = *pa++;
+    while (pb <= pb_last)
+        *pc++ = *pb++;
+} // MergeList
