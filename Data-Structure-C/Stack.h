@@ -1,7 +1,9 @@
 #include "base.h"
-#define STACK_INIT_SIZE 100
-#define STACKINCREMENT 10
-typedef char SElemType;
+
+#define STACK_INIT_SIZE 10
+#define STACKINCREMENT 100
+
+typedef int SElemType;
 typedef struct
 {
     SElemType *base;
@@ -18,13 +20,20 @@ Status InitStack(Stack *S)
     S->stacksize = STACK_INIT_SIZE;
     return OK;
 }
+
 Status DestroyStack(Stack *S)
 {
     S->top = S->base;
     free(S->base);
     return OK;
 }
-Status ClearStack(Stack *S) 
+
+Status StackEmpty(const Stack *S)
+{
+    return (S->top == S->base);
+}
+
+Status ClearStack(Stack *S)
 {
     SElemType *p = S->base;
     if (StackEmpty(S))
@@ -34,10 +43,8 @@ Status ClearStack(Stack *S)
             *p = 0;
     return OK;
 }
-Status StackEmpty(const Stack *S)
-{
-    return (S->top == S->base);
-}
+
+
 int StackLength(Stack *S)
 {
     if (S)
@@ -45,7 +52,8 @@ int StackLength(Stack *S)
     else
         return 0;
 }
-Status GetTop(Stack *S, const SElemType e)
+
+Status GetTop(Stack *S, SElemType e)
 {
     if (S->top == S->base)
         return ERROR;
@@ -57,11 +65,11 @@ Status Push(Stack *S, SElemType e)
 {
     if (S->top - S->base >= S->stacksize)
     {
-        S->base = (SElemType *) ralloc (S->base,
+        S->base = (SElemType *) realloc (S->base,
             (S->stacksize + STACKINCREMENT) * sizeof(SElemType));
         if (!S->base)
             exit(OVERFLOW);
-        S->top = S->base + S->STACKINCREMENT;
+        S->stacksize += STACKINCREMENT;
     }
     *S->top ++ = e;
     return OK;
@@ -78,14 +86,19 @@ Status Pop(Stack *S, SElemType *e)
 Status StackTraverse(Stack *S, Status (*Visit)(SElemType e))
 {
     SElemType *p;
+    p = S->top;
     if (!S || StackEmpty(S))
         return ERROR;
-    while (p++ <= S->top)
+    while (--p >= S->base)
         Visit(*p);
     return OK;
 }
+
 Status Visit(SElemType e)
 {
-    printf("%4c", e);
+    if (e > 9)
+        printf("%c", e + 87);
+    else
+        printf("%d", e);
     return OK;
 }
