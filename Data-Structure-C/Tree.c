@@ -17,7 +17,7 @@
 Status CreateBiTree (BiTree* T);
 Status TVisit(TElemType e);
 Status PreOrderTraverseCursive (struct BiTNode *T, Status (* TVisit) (TElemType e));
-Status InorderTraverseUnCursive (struct BiTNode *T, Status (* TVisit) (TElemType e));
+Status InorderTraverseUnCursive (BiTree T, Status (* TVisit) (TElemType e));
 Status PostOrderTraverseCursive (struct BiTNode *T, Status (* TVisit) (TElemType e));
 Status LevelOrderTraverse (BiTree T, Status (* TVisit) (TElemType e));
 
@@ -34,6 +34,8 @@ int main (void)
     PostOrderTraverseCursive(bt, TVisit);
     printf("\nInOrderTraverse: \n");
     InorderTraverseUnCursive(bt, TVisit);
+    printf("\nLevelOrderTraverse: \n");
+    LevelOrderTraverse(bt, TVisit);
 	putchar('\n');
 	return 0;
 }
@@ -42,7 +44,7 @@ Status CreateBiTree (BiTree* T)
 {
     char *ch;
     ch = (char *)malloc (sizeof (char));
-    printf("Input a Tree data: \n");
+    //printf("Input a Tree data: \n");
     scanf ("%c", ch);
     while (getchar() != '\n')
     	continue;
@@ -81,6 +83,30 @@ Status PreOrderTraverseCursive (struct BiTNode* T, Status (* TVisit)(TElemType e
 
 Status InorderTraverseUnCursive (BiTree T, Status (* TVisit)(TElemType e))
 {
+    Stack S;
+    InitStack(&S);
+    BiTree p = T;
+    while (p || (!StackEmpty(&S)))
+    {
+        if (p)
+        {
+            Push(&S, p);
+            p = p->lchild;
+        }
+        else
+        {
+            Pop(&S, &p);
+            if (!TVisit(p->data))
+                return ERROR;
+            p = p->rchild;
+        }
+    }
+    return OK;
+}
+
+/*
+Status InorderTraverseUnCursive (BiTree T, Status (* TVisit)(TElemType e))
+{
     Stack *S = (Stack *) malloc (sizeof(Stack));
     BiTree *p = (BiTree *)malloc(sizeof (BiTree));
     S->base = NULL;
@@ -105,6 +131,7 @@ Status InorderTraverseUnCursive (BiTree T, Status (* TVisit)(TElemType e))
     }
     return OK;
 }
+*/
 
 Status PostOrderTraverseCursive (struct BiTNode *T, Status (* TVisit)(TElemType e))
 {
@@ -121,6 +148,27 @@ Status PostOrderTraverseCursive (struct BiTNode *T, Status (* TVisit)(TElemType 
 
 Status LevelOrderTraverse (struct BiTNode *T, Status (* TVisit)(TElemType e))
 {
+    BiTree Queue[100];
+    int front,rear;
+    if (T==NULL) return ERROR;
+    front = -1;
+    rear = 0;
+    Queue[rear] = T;
+    while(front != rear)
+    {
+        front++;
+        TVisit(Queue[front]->data);
+        if (Queue[front]->lchild!=NULL)
+        {
+            rear++;
+            Queue[rear]=Queue[front]->lchild;
+        }
+        if (Queue[front]->rchild!=NULL)
+        {
+            rear++;
+            Queue[rear]=Queue[front]->rchild;
+        }
+    }
     return OK;
 }
 

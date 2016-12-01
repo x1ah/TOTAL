@@ -1,22 +1,3 @@
-/*
-- + a N
-- + N	(a)
-- + * b
-- + *	(a, b)
-- + * - c
-- + * - (a, b, c)
-- + * - d
-- + * - (a, b, c, d)
-- + * (a, b, c, d, -)
-- + (a, b, c, d, -, *)
-- 	(a, b, c, d, -, *, +)
-- / e
-- / (a, b, c, d, -, *, +, e)
-- / f
-- / (a, b, c, d, -, *, +, e)
-- 	(a, b, c, d, -, *, +, e, /)
-	(a, b, c, d, -, *, +, e, /, -)
-*/
 #include "base.h"
 
 #define STACK_INIT_SIZE 10
