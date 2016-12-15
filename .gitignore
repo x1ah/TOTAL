@@ -1,3 +1,5 @@
 *.out
 *.pyc
 *~
+*.class
+Thinking-In-Java/*/doc*/
